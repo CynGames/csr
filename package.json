@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "vcs": "func() { git add . && git commit -m \"$1\" && git push origin master; }; func"
+    "vcs": "vcs() { git add . && git commit -m \"$1\" && git push origin master; }; vcs"
   },
   "eslintConfig": {
     "extends": [
