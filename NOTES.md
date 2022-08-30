@@ -1,4 +1,4 @@
-Estructura general de la pagina
+# Estructura general de la pagina
 
 <Header/>
 <Body/>
@@ -16,10 +16,10 @@ Estructura general de la pagina
 
 # Entidades:
 
-- Centro Azulín Azulado
-- El Amparo
-- CDVS (Centro de Dadores Voluntarios de Sangre)
-- Defensa Civil | Centro de Dadores
-- Grupo Voluntarios Defensa Civil Rafaela
+- Grupo Voluntarios Defensa Civil de Rafaela
+- Centro de Dadores Voluntarios de Sangre de Rafaela
 - Asociación Nazareth
-- Una Nueva Esperanza
+- Asociación Civil | Azulín Azulado
+- Asociación Civil | El Amparo
+- Asociación Civil | Una Nueva Esperanza
+- Asociación Cooperadora Escuela Nº 2129 de Rafaela

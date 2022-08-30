@@ -13,8 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import SupportIcon from '@mui/icons-material/Support';
 
-const pagesMobile = ['Descripción', 'Servicios', 'Entidades', 'Contacto'];
-const pagesDesktop = pagesMobile.reverse();
+const pages = ['Descripción', 'Servicios', 'Entidades', 'Contacto'];
+const pagesReversed = pages.reverse();
 // const pagesDesktop = ['Contacto', 'Entidades', 'Servicios', 'Descripción'];
 
 const ResponsiveAppBar = () => {
@@ -52,7 +52,7 @@ const ResponsiveAppBar = () => {
               fontFamily: 'Helvetica Neue',
               fontWeight: 550,
               letterSpacing: '.1rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
@@ -60,11 +60,11 @@ const ResponsiveAppBar = () => {
           </Typography>
 
           <Box sx={{ flexGrow: 1, flexDirection: 'row-reverse', display: { xs: 'none', md: 'flex' } }}>
-            {pagesDesktop.map((page) => (
+            {pagesReversed.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 1, px: 3, color: 'white', display: 'block' }}
+                sx={{ my: 1, px: 3, fontFamily: 'Helvetica Neue', fontWeight: 700, color: 'black',  display: 'block' }}
               >
                 {page}
               </Button>
@@ -84,7 +84,7 @@ const ResponsiveAppBar = () => {
               fontFamily: 'Helvetica Neue',
               fontWeight: 550,
               letterSpacing: '.1rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
@@ -120,9 +120,9 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pagesMobile.map((page) => (
+              {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" sx={{fontFamily: 'Helvetica Neue'}} >{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
