@@ -7,33 +7,22 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import SupportIcon from '@mui/icons-material/Support';
 
 const pages = ['Descripción', 'Servicios', 'Entidades', 'Contacto'];
 const pagesReversed = pages.reverse();
-// const pagesDesktop = ['Contacto', 'Entidades', 'Servicios', 'Descripción'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -49,7 +38,7 @@ const ResponsiveAppBar = () => {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'Helvetica Neue',
+              fontFamily: 'Matthildur',
               fontWeight: 550,
               letterSpacing: '.1rem',
               color: 'black',
@@ -64,7 +53,7 @@ const ResponsiveAppBar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 1, px: 3, fontFamily: 'Helvetica Neue', fontWeight: 700, color: 'black',  display: 'block' }}
+                sx={{ my: 1, px: 3, fontFamily: 'Matthildur', fontWeight: 700, color: 'black',  display: 'block' }}
               >
                 {page}
               </Button>
@@ -81,7 +70,7 @@ const ResponsiveAppBar = () => {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'Helvetica Neue',
+              fontFamily: 'Matthildur',
               fontWeight: 550,
               letterSpacing: '.1rem',
               color: 'black',
@@ -122,7 +111,7 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" sx={{fontFamily: 'Helvetica Neue'}} >{page}</Typography>
+                  <Typography textAlign="center" sx={{fontFamily: 'Matthildur'}} >{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
