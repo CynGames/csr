@@ -12,9 +12,11 @@ import PachecoBoulevard from './assets/fonts/PachecoBoulevard.woff';
 import './styles/App.css';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import green from '@mui/material/colors/green';
-import purple from '@mui/material/colors/purple';
 import { CssBaseline } from '@mui/material';
+
+import green from '@mui/material/colors/green';
+import lightBlue from '@mui/material/colors/lightBlue';
+import purple from '@mui/material/colors/purple';
 
 let theme = createTheme({
   typography: {
@@ -22,7 +24,7 @@ let theme = createTheme({
   },
 
   palette: {
-    primary: green,
+    primary: lightBlue,
     secondary: purple,
   },
 

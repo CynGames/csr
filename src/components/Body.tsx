@@ -8,7 +8,6 @@ const Body = () =>
 {
   return (
     <div>
-      Body
       <About />
       <ClientsHolder />
       <Contact />
