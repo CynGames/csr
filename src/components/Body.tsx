@@ -1,6 +1,7 @@
+import { Divider } from '@mui/material'
 import React from 'react'
 import About from './About'
-import ClientsHolder from './ClientsHolder'
+import EntidadesHolder from './EntidadesHolder'
 import Contact from './Contact'
 import Donation from './Donation'
 
@@ -9,7 +10,7 @@ const Body = () =>
   return (
     <div>
       <About />
-      <ClientsHolder />
+      <EntidadesHolder />
       <Contact />
       <Donation />
     </div>
