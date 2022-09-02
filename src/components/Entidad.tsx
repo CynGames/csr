@@ -30,38 +30,31 @@ const Entidad: React.FC<Props> = ({ props }) =>
     whatsapp
   } = props
 
-  // return (
-  //   <div>
-  //     {name}
-  //     <EntidadDescription />
-  //     <EntidadContact />
-  //   </div>
-  // )
-
   return (
-    <Card sx={{ maxWidth: 345, py: 2 }} >
-      <CardMedia
-        component="img"
-        height="140"
-        image={logo}
-        alt={name}
-        sx={{ objectFit: "contain" }}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {description}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Facebook</Button>
-        <Button size="small">Instagram</Button>
-        <Button size="small">WhatsApp</Button>
-      </CardActions>
-      <Divider />
-    </Card>
+    <div style={{display:'flex', justifyContent:"center"}}>
+      <Card sx={{ maxWidth: 345, py: 2, my: 1 }}>
+        <CardMedia
+          component="img"
+          height="140"
+          image={logo}
+          alt={name}
+          sx={{ objectFit: "contain" }}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" fontFamily={"Helvetica Nue"} align="center">
+            {name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" fontFamily={"Helvetica Nue"}>
+            {description}
+          </Typography>
+        </CardContent>
+        <CardActions sx={{justifyContent:"space-between", mx:2}}>
+          {has_facebook && <Button size="small">Facebook</Button>} 
+          {has_instagram && <Button size="small">Instagram</Button>} 
+          {has_whatsapp && <Button size="small">WhatsApp</Button>} 
+        </CardActions>
+      </Card>
+    </div>
   );
 }
 

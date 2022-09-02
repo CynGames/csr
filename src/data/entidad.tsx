@@ -5,7 +5,7 @@ const UNE: EntidadTypings = {
   name: "Asociación Civil - Una Nueva Esperanza",
   description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil magni labore repellat maiores quia explicabo similique debitis, alias possimus eaque tenetur quae aliquam expedita dolorem nulla veritatis cupiditate amet consequatur.",
   logo: "https://i.imgur.com/xdU2j7B.jpg",
-  has_facebook: false,
+  has_facebook: true,
   facebook: "",
   has_instagram: false,
   instagram: "",
@@ -22,7 +22,7 @@ const Nazareth: EntidadTypings = {
   facebook: "",
   has_instagram: false,
   instagram: "",
-  has_whatsapp: false,
+  has_whatsapp: true,
   whatsapp: "",
 }
 
@@ -30,10 +30,10 @@ const GrupoVoluntariosDefensaCivil: EntidadTypings = {
   id: 3,
   name: "Grupo Voluntarios Defensa Civil de Rafaela",
   description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil magni labore repellat maiores quia explicabo similique debitis, alias possimus eaque tenetur quae aliquam expedita dolorem nulla veritatis cupiditate amet consequatur.",
-  logo: "https://i.imgur.com/q40OANH.jpg",
+  logo: "https://i.imgur.com/QNLQ2iY.jpg",
   has_facebook: false,
   facebook: "",
-  has_instagram: false,
+  has_instagram: true,
   instagram: "",
   has_whatsapp: false,
   whatsapp: "",
@@ -43,7 +43,7 @@ const DadoresVoluntariosSangre: EntidadTypings = {
   id: 4,
   name: "Centro de Dadores Voluntarios de Sangre de Rafaela",
   description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil magni labore repellat maiores quia explicabo similique debitis, alias possimus eaque tenetur quae aliquam expedita dolorem nulla veritatis cupiditate amet consequatur.",
-  logo: "https://i.imgur.com/q40OANH.jpg",
+  logo: "https://i.imgur.com/AU6FTnN.png",
   has_facebook: false,
   facebook: "",
   has_instagram: false,
@@ -54,7 +54,7 @@ const DadoresVoluntariosSangre: EntidadTypings = {
 
 const AzulínAzulado: EntidadTypings = {
   id: 5,
-  name: "Asociación Civil | Azulín Azulado",
+  name: "Asociación Civil - Azulín Azulado",
   description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil magni labore repellat maiores quia explicabo similique debitis, alias possimus eaque tenetur quae aliquam expedita dolorem nulla veritatis cupiditate amet consequatur.",
   logo: "https://i.imgur.com/wKXxNUY.jpg",
   has_facebook: false,
@@ -85,9 +85,9 @@ const CooperadoraEscuelita: EntidadTypings = {
   logo: "https://i.imgur.com/Maf2ofG.png",
   has_facebook: false,
   facebook: "",
-  has_instagram: false,
+  has_instagram: true,
   instagram: "",
-  has_whatsapp: false,
+  has_whatsapp: true,
   whatsapp: "",
 }
 
