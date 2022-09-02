@@ -12,8 +12,9 @@ const Contact = () =>
       alignItems: "center",
       m: 2
     }}>
-      <Typography fontWeight={"bold"} variant={'h5'} fontFamily={"Helvetica Nue"}>
+      <Typography fontWeight={"bold"} variant={'h5'} fontFamily={"Helvetica Nue"} align="center">
         ¿Quieres contactarnos?
+        Necesitamos tu Ayuda
       </Typography>
       <hr />
 
