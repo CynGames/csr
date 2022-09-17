@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, TextField, TextFieldClasses, TextFieldProps, Typography } from '@mui/material'
+import { Box, Button, FormControl, TextField, Typography } from '@mui/material'
 import React, { FormEvent, useState, ChangeEvent, useRef } from 'react'
 import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -86,8 +86,6 @@ const Contact = () =>
     }}>
       <Typography fontWeight={"bold"} variant={'h5'} fontFamily={"Helvetica Nue"} align="center">
         ¿Quieres contactarnos?
-        <br />
-        Necesitamos tu Ayuda
       </Typography>
       <hr />
 

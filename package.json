@@ -23,6 +23,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^2.1.0",
+    "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.8.2",
@@ -33,7 +34,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "vcs": "vcs() { git add . && git commit -m \"$1\" && git push origin master; }; vcs"
+    "vcs": "vcs() { git add . && git commit -m \"$1\" && git push origin master; }; vcs",
+    "init": "code . && npm start"
   },
   "eslintConfig": {
     "extends": [

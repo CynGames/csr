@@ -25,7 +25,6 @@ let theme = createTheme({
 
   palette: {
     primary: lightBlue,
-    secondary: purple,
   },
 
   components: {
@@ -65,7 +64,7 @@ function App()
 
   return (
     <ThemeProvider theme={theme} >
-      <CssBaseline/>
+      <CssBaseline />
       <Navbar />
       <Header />
       <Body />

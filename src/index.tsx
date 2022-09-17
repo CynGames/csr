@@ -2,14 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import App from './App';
+import { configureStore } from '@reduxjs/toolkit';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import contributionDataReducer from './reducers/contributionDataReducer';
+import personalDataReducer from './reducers/personalDataReducer';
+import paymentReducer from './reducers/paymentReducer';
+
+const store = configureStore({
+  reducer: {
+    contributionData: contributionDataReducer,
+    personalData: personalDataReducer,
+    payment: paymentReducer,
+  }
+})
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 

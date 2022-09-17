@@ -1,0 +1,1 @@
+export const Montos = [100, 300, 500, 1000]
