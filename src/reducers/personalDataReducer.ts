@@ -4,13 +4,13 @@ interface ReducerState
 {
   nombre: string,
   direccion: string,
-  telefono: number,
+  telefono: string,
 }
 
 const initialState: ReducerState = {
-  nombre: "",
-  direccion: "",
-  telefono: 0,
+  nombre: '',
+  direccion: '',
+  telefono: '',
 }
 
 const personalSlice = createSlice({

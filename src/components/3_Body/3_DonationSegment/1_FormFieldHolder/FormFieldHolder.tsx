@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box } from '@mui/system';
-import Contribution from './Contribution';
-import Personal from './Personal';
+import Contribution from './1_Contribution/Contribution';
+import Personal from './2_Personal/Personal';
 
 const FormFieldHolder = () =>
 {

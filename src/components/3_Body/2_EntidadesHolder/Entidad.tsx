@@ -6,10 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { EntidadTypings } from '../typings/entidad'
-import Contribution from './Contribution'
-import EntidadDescription from './Personal'
-import { Divider } from '@mui/material';
+import { EntidadTypings } from '../../../typings/entidad'
 
 interface Props extends React.PropsWithChildren
 {

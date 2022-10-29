@@ -2,15 +2,15 @@ import { createSlice } from '@reduxjs/toolkit'
 
 interface ReducerState {
   entidad: string,
-  monto: string | number,
-  meses: string | number,
+  monto: string,
+  meses: string,
 }
 
 const initialState: ReducerState = {
-  entidad: "",
-  monto: "",
-  meses: "",
-}
+  entidad: '',
+  monto: '',
+  meses: '',
+};
 
 const contributionSlice = createSlice({
   name: "contribution",

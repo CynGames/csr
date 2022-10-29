@@ -1,6 +1,6 @@
 import React from 'react'
 import Typography from '@mui/material/Typography';
-import { EntidadesData } from '../data/entidad';
+import { EntidadesData } from '../../../data/entidad';
 import Entidad from './Entidad';
 import { Divider, Grid } from '@mui/material';
 

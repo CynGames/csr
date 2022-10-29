@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@mui/system';
 import { TextField } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux'
-import { updatePersonalDireccion, updatePersonalName, updatePersonalTelefono } from '../reducers/personalDataReducer';
+import { updatePersonalDireccion, updatePersonalName, updatePersonalTelefono } from '../../../../../reducers/personalDataReducer';
 
 const Personal = () =>
 {
