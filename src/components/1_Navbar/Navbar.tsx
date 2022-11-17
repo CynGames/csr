@@ -11,8 +11,27 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import SupportIcon from '@mui/icons-material/Support';
 
-const pages = ['Descripción', 'Servicios', 'Entidades', 'Contacto'];
-const pagesReversed = pages.reverse();
+const pages =
+    [
+        {
+            name: 'Nuestros Servicios',
+            id: 'about'
+        },
+        {
+            name: 'Trabajando con...',
+            id: 'entidad'
+        },
+        {
+            name: 'Cómo Ayudar',
+            id: 'donation'
+        },
+        {
+            name: 'Contacto',
+            id: 'contact'
+        },
+    ]
+
+const pagesReversed = pages
 
 const ResponsiveAppBar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -24,6 +43,22 @@ const ResponsiveAppBar = () => {
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
+
+    const handleScrollTo = (pageId: any) => {
+
+        const section = document.getElementById(`${pageId}`);
+        console.log(section)
+
+        if (section) {
+            setTimeout(function () {
+                section.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }, 100);
+        } else
+            throw new Error('Section no existe');
+    }
 
     return (
         <AppBar position="static">
@@ -48,11 +83,17 @@ const ResponsiveAppBar = () => {
                         Campaña de Socios Rafaela
                     </Typography>
 
-                    <Box sx={{flexGrow: 1, flexDirection: 'row-reverse', display: {xs: 'none', md: 'flex'}}}>
-                        {pagesReversed.map((page) => (
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            flexDirection: 'row',
+                            display: {xs: 'none', md: 'flex'},
+                            justifyContent: 'flex-end'
+                        }}>
+                        {pages.map((page) => (
                             <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
+                                key={page.name}
+                                onClick={() => handleScrollTo(page.id)}
                                 sx={{
                                     my: 1,
                                     px: 3,
@@ -62,7 +103,7 @@ const ResponsiveAppBar = () => {
                                     display: 'block'
                                 }}
                             >
-                                {page}
+                                {page.name}
                             </Button>
                         ))}
                     </Box>
@@ -117,8 +158,13 @@ const ResponsiveAppBar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center" sx={{fontFamily: 'Matthildur'}}>{page}</Typography>
+                                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                                    <Typography
+                                        fontFamily='Montserrat'
+                                        textAlign="center"
+                                        onClick={() => handleScrollTo(page.id)}>
+                                        {page.name}
+                                    </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>

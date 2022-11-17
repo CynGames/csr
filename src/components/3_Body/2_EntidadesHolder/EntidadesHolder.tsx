@@ -1,26 +1,46 @@
 import React from 'react'
 import Typography from '@mui/material/Typography';
-import { EntidadesData } from '../../../data/entidad';
+import {EntidadesData} from '../../../data/entidad';
 import Entidad from './Entidad';
-import { Divider, Grid } from '@mui/material';
+import {Box} from '@mui/material';
 
-const EntidadesHolder = () =>
-{
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
-  return (
+const EntidadesHolder = () => {
 
-    <div>
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: {max: 4000, min: 3000},
+            items: 5
+        },
+        desktop: {
+            breakpoint: {max: 3000, min: 1024},
+            items: 3
+        },
+        tablet: {
+            breakpoint: {max: 1024, min: 464},
+            items: 2
+        },
+        mobile: {
+            breakpoint: {max: 464, min: 0},
+            items: 1
+        }
+    };
 
-      <Typography fontFamily={"Helvetica Nue"} variant={"h5"} align="center" pb={2}>
-        Actualmente trabajando con las siguientes entidades
-      </Typography>
+    return (
+        <Box id={'entidad'}>
+            <Typography fontFamily={"Helvetica Nue"} variant={"h5"} align="center" pb={2}>
+                Actualmente trabajando con las siguientes entidades
+            </Typography>
 
-      {/* <Divider /> */}
-
-      {EntidadesData.map(entidad => <Entidad key={entidad.id} props={entidad}>Entidad</Entidad>)}
-
-    </div>
-  )
+            <Carousel responsive={responsive} infinite={true}>
+                {EntidadesData.map(entidad => <Entidad key={entidad.id} props={entidad}></Entidad>)}
+            </Carousel>;
+        </Box>
+    )
 }
 
 export default EntidadesHolder
+

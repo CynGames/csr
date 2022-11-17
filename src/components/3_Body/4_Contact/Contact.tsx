@@ -65,13 +65,15 @@ const Contact = () => {
     }
 
     return (
-        <Box sx={{
+        <Box
+            id='contact'
+            sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             m: 2
         }}>
-            <Typography fontWeight={"bold"} variant={'h5'} fontFamily={"Helvetica Nue"} align="center">
+            <Typography  fontWeight={"bold"} variant={'h5'} fontFamily={"Helvetica Nue"} align="center">
                 ¿Quieres contactarnos?
             </Typography>
             <hr/>

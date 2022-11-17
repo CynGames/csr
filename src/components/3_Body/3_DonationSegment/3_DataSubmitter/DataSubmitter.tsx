@@ -65,7 +65,7 @@ const DataSubmitter = () => {
 
         console.log("PostSubmission - Donation")
 
-        return;
+        if(!process.env.REACT_APP_ENABLE_ALL_FEATURES) return;
 
         try {
             await axios.post(process.env.REACT_APP_DONATION_FORM_URL ?? "https://submit-form.com/mVlOV5Xa", data);

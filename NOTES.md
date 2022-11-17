@@ -22,7 +22,6 @@
 - Centro de Dadores Voluntarios de Sangre de Rafaela
 - Asociación Civil | Azulín Azulado
 - Asociación Civil | El Amparo
-
 - Asociación Cooperadora Escuela Nº 2129 de Rafaela
 
 Features:
@@ -31,17 +30,21 @@ Features:
 [//]: # (Flujo de usuario para pagar)
 [//]: # (    Grab all data)
 [//]: # (    Lock send button unless fields are completed)
+[//]: # (Footer)
+[//]: # (Fixear Navbar jump to..)
+[//]: # (Carrusel de entidades &#40;mobile&#41;.)
+[//]: # (Dreaded Responsiveness.)
 
-Footer
-Fixear Navbar jump to..
-
-Carrusel de entidades (mobile)
-Acomodar todo para pc.
-
-Rellenar con la informacion correcta.
-
-BACKEND
+BACKEND:
 Limpiar el backend
-Analyzar cuando llevaria implementar sendgrid como reemplazo long term de formspark.
 Registrar transacciones y consultas en una base de datos.
-Implementar posibilidad de subscripcion mensual por mp?
+Implementar de subscripcion mensual por mp.
+
+CLEAN UP:
+Rellenar con la informacion correcta.
+Subir todo a un hosting site.
+
+NICE TO HAVE:
+Considerar Sendgrid como reemplazo long term de Formspark.
+Dockerizar la app?
+Dodging submit button
