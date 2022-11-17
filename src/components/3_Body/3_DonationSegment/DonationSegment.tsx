@@ -24,51 +24,7 @@ type ServiceMessage = {
 };
 
 const DonationSegment = () => {
-
-    // const [formState, setFormState] = useState<FormState>();
-    // const [submitting, setSubmitting] = useState<boolean>(false);
     const [message, setMessage] = useState<ServiceMessage>();
-
-    // const updateFormControl = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    // {
-    //   const { name, value } = event.target;
-    //   const formKey = name as keyof FormState;
-    //   const updatedFormState = { ...formState };
-    //   // Accede al id del campo que corresponde.
-    //   // updatedFormState[formKey] = value as keyof FormState;
-    //   setFormState(updatedFormState);
-
-    //   console.log(formState)
-    // }
-
-    const prepareSubmissionForm = () => {
-
-    }
-
-    // const submitForm = async (event: FormEvent) => {
-    //     event.preventDefault();
-    //     setSubmitting(true);
-    //     await postSubmission();
-    //     setSubmitting(false);
-    // };
-
-    // const postSubmission = async () => {
-    //     const payload = {};
-    //
-    //
-    //     try {
-    //         await axios.post(formSparkUrl, payload);
-    //         setMessage({
-    //             color: 'success.main',
-    //             text: 'Mensaje enviado exitosamente.'
-    //         })
-    //     } catch (error) {
-    //         setMessage({
-    //             color: 'error.main',
-    //             text: 'Error en la entrega del mensaje. Por favor notifique del problema a tomasm.leguizamon@gmail.com.'
-    //         })
-    //     }
-    // }
 
     return (
         <Grid container>
