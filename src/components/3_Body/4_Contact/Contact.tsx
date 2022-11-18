@@ -1,4 +1,4 @@
-import {Box, Button, FormControl, TextField, Typography} from '@mui/material'
+import {Box, Button, FormControl, TextField, Typography, Grid} from '@mui/material'
 import React, {FormEvent, useState, ChangeEvent, useRef} from 'react'
 import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -65,83 +65,87 @@ const Contact = () => {
     }
 
     return (
-        <Box
-            id='contact'
-            sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            m: 2
-        }}>
-            <Typography  fontWeight={"bold"} variant={'h5'} fontFamily={"Helvetica Nue"} align="center">
-                ¿Quieres contactarnos?
-            </Typography>
-            <hr/>
-
-            <Typography variant={'h6'} fontFamily={"Helvetica Nue"} align="center">
-                Escribe tu mensaje debajo y te responderemos en la brevedad.
-            </Typography>
-            <hr/>
-
-            {NotifyOutcome(message)}
-
-            <Box sx={{display: "flex"}}>
-                <FormControl>
-                    <TextField
-                        required
-                        id="outlined-basic"
-                        name='name'
-                        label="Nombre"
-                        variant="outlined"
-                        value={formState.name}
-                        onChange={updateFormControl}
-                        sx={{minWidth: "60vw"}}
-                    />
+        <Grid container>
+            <Grid item xs={12}>
+                <Box
+                    id='contact'
+                    sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        m: 2,
+                    }}>
+                    <Typography fontWeight={"bold"} variant={'h5'} fontFamily={"Helvetica Nue"} align="center">
+                        ¿Quieres contactarnos?
+                    </Typography>
                     <hr/>
 
-                    <TextField
-                        required
-                        id="outlined-basic"
-                        name='email'
-                        label="Email"
-                        variant="outlined"
-                        value={formState.email}
-                        onChange={updateFormControl}
-                        sx={{minWidth: "60vw"}}
-                    />
+                    <Typography variant={'h6'} fontFamily={"Helvetica Nue"} align="center">
+                        Escribe tu mensaje debajo y te responderemos en la brevedad.
+                    </Typography>
                     <hr/>
 
-                    <TextField
-                        required
-                        id="outlined-multiline-static"
-                        name='message'
-                        label="Mensaje"
-                        multiline
-                        rows={4}
-                        value={formState.message}
-                        onChange={updateFormControl}
-                    />
-                    <hr/>
+                    {NotifyOutcome(message)}
 
-                    <ReCAPTCHA
-                        ref={recaptchaRef}
-                        sitekey={recaptchaKey}
-                        onChange={updateRecaptchaToken}
-                    >
-                    </ReCAPTCHA>
-                    <hr/>
+                    <Box sx={{display: "flex"}}>
+                        <FormControl>
+                            <TextField
+                                required
+                                id="outlined-basic"
+                                name='name'
+                                label="Nombre"
+                                variant="outlined"
+                                value={formState.name}
+                                onChange={updateFormControl}
+                                sx={{minWidth: "60vw"}}
+                            />
+                            <hr/>
 
-                    <Button
-                        disabled={submitting}
-                        onClick={submitForm}
-                        variant="contained"
-                        sx={{fontFamily: "Helvetica Nue", color: "white"}}
-                    >
-                        {submitting ? 'Enviando Mensage...' : "Enviar"}
-                    </Button>
-                </FormControl>
-            </Box>
-        </Box>
+                            <TextField
+                                required
+                                id="outlined-basic"
+                                name='email'
+                                label="Email"
+                                variant="outlined"
+                                value={formState.email}
+                                onChange={updateFormControl}
+                                sx={{minWidth: "60vw"}}
+                            />
+                            <hr/>
+
+                            <TextField
+                                required
+                                id="outlined-multiline-static"
+                                name='message'
+                                label="Mensaje"
+                                multiline
+                                rows={4}
+                                value={formState.message}
+                                onChange={updateFormControl}
+                            />
+                            <hr/>
+
+                                <ReCAPTCHA
+                                    ref={recaptchaRef}
+                                    sitekey={recaptchaKey}
+                                    onChange={updateRecaptchaToken}
+                                >
+                                </ReCAPTCHA>
+                            <hr/>
+
+                            <Button
+                                disabled={submitting}
+                                onClick={submitForm}
+                                variant="contained"
+                                sx={{fontFamily: "Helvetica Nue", color: "white"}}
+                            >
+                                {submitting ? 'Enviando Mensage...' : "Enviar"}
+                            </Button>
+                        </FormControl>
+                    </Box>
+                </Box>
+            </Grid>
+        </Grid>
     )
 }
 

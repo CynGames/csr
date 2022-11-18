@@ -6,18 +6,6 @@ import PaymentButtons from './2_PaymentButtons/PaymentButtons';
 import DataSubmitter from './3_DataSubmitter/DataSubmitter';
 import {NotifyOutcome} from "../../../utils/helpers";
 
-type FormState = {
-    entidad: string,
-    monto: string | number,
-    meses: string | number,
-
-    nombre: string,
-    direccion: string,
-    telefono: string | number,
-
-    debito: boolean
-};
-
 type ServiceMessage = {
     color: string,
     text: string;
@@ -28,10 +16,7 @@ const DonationSegment = () => {
 
     return (
         <Grid container>
-            <Grid
-                item
-                xs={12}
-            >
+            <Grid item xs={12} sx={{maxWidth: "60vw"}}>
                 <Box
                     id={'donation'}
                     sx={{
