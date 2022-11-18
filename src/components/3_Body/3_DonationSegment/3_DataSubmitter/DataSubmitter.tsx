@@ -43,11 +43,7 @@ const DataSubmitter = () => {
 
     function CheckForFormCompletion() {
 
-        console.log(!Object.keys(data).some(function (k: any) {
-            return data[k];
-        }))
-
-        if (Object.keys(data).some(function (k: any) {
+        if (!Object.keys(data).some(function (k: any) {
             return data[k];
         })) {
             setMessage({
