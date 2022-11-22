@@ -40,7 +40,7 @@ const DataSubmitter = () => {
 
         console.log(url);
 
-        await axios.post(url, stateJson);
+        await axios.post(url, stateJson, customConfig);
     }
 
     function CheckForFormCompletion() {
