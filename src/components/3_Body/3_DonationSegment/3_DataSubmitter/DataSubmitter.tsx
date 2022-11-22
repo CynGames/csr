@@ -38,7 +38,11 @@ const DataSubmitter = () => {
                 ? process.env.REACT_APP_LOCALHOST_URL
                 : process.env.REACT_APP_EXTERNALHOST_URL}/payment`
 
+        console.log('Paso por payment process');
+
         await axios.post(url, stateJson, customConfig);
+
+        console.log('Payment process enlace enviado');
     }
 
     function CheckForFormCompletion() {
