@@ -31,7 +31,14 @@ const EntidadesHolder = () => {
 
     return (
         <Box id={'entidad'}>
-            <Typography fontFamily={"Helvetica Nue"} variant={"h5"} align="center" pb={2}>
+            <Typography
+                id='about'
+                align='center'
+                variant='h4'
+                m={2}
+                fontFamily="Helvetica Nue"
+                fontWeight={"bold"}
+            >
                 Actualmente trabajando con las siguientes entidades
             </Typography>
 

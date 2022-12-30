@@ -9,6 +9,7 @@ import Footer from './components/4_Footer/Footer';
 import {ThemeProvider} from '@mui/material/styles';
 import {CssBaseline} from '@mui/material';
 import {customTheme} from "./utils/mui_theme";
+import 'typeface-aclonica';
 
 const App = () => {
     return (

@@ -4,28 +4,14 @@ import Typography from '@mui/material/Typography';
 const About = () => {
     return (
         <>
-            <Typography
-                id='about'
-                align='center'
-                variant='h4'
-                py={"5%"}
-                fontFamily="Helvetica Nue"
-                fontWeight={"bold"}
-            >
+            <Typography mt={2} fontWeight={"bold"} variant={'h5'} fontFamily={"Helvetica Nue"} align="center">
                 ¿Qué ofrecemos?
             </Typography>
 
-            <Typography
-                align='center'
-                fontSize={18}
-                pb={"5%"}
-                fontFamily="Helvetica Nue"
-                fontWeight={""}
-                mx={2}
-            >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil magni labore repellat maiores quia
-                explicabo similique debitis, alias possimus eaque tenetur quae aliquam expedita dolorem nulla veritatis
-                cupiditate amet consequatur.
+            <Typography variant={'h6'} fontFamily={"Helvetica Nue"} align="center" sx={{m: 2}}>
+                Somos una empresa que se dedica a asociar a personas interesadas en colaborar con entidades de diferentes tipos.
+                <br/>
+                Al abonar un monto mensual, podrás formar parte de nuestra comunidad de colaboradores y contribuir a proyectos que te interesen.
             </Typography>
         </>
     )

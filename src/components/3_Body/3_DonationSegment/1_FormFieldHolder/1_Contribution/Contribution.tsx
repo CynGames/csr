@@ -58,7 +58,6 @@ const Contribution = () => {
 
             <FormControl>
                 <TextField
-                    required
                     id="outlined-basic"
                     name='mes'
                     label="Meses"
@@ -66,6 +65,7 @@ const Contribution = () => {
                     value={contribution.meses}
                     onChange={handleMeses}
                     sx={{mb: 1.5}}
+                    required
                 />
             </FormControl>
         </Box>
